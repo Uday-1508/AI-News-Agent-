@@ -5,10 +5,9 @@ import os
 
 load_dotenv()
 llm = LLM(
-    model="groq/llama-3.3-70b-versatile",
+    model="groq/llama3-70b-8192",
     api_key=os.getenv("GROQ_API_KEY")
 )
-
 search_tool = SerperDevTool() # tool perform tasks, here it let search google
 
 researcher = Agent(
